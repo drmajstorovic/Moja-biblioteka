@@ -48,7 +48,7 @@ html, body {
     box-shadow: 0 0 20px rgba(166, 163, 224, 0.2);
   }
 
-  .form input {
+  input {
     margin: 10px;
     border: 1px solid gray;
     border-radius: 75px;
@@ -57,15 +57,18 @@ html, body {
     padding-left: 10px;
   }
 
-  #submit {
-    width: fit-content;
-    height: fit-content;
+  .button {
+    width:  max-content;
+    height: max-content;
+    border: 1px solid gray;
+    border-radius: 75px;
     background-color: blanchedalmond;
-    margin: 15px;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 20px 5px 20px;
+    margin: 5px;
   }
 
-  .form form {
+  #login {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    margin-bottom: 10px;
   }

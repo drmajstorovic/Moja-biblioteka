@@ -13,11 +13,20 @@
         <div class="content">
             <div class="form">
                 <h2>Moja biblioteka</h2>
-                <form action="/login">
+                <form action="/login" id="login">
+                    @csrf
                     <h3>Prijava</h3>
                     <input type="text" name="username" placeholder="(username)"><br>
                     <input type="password" name="password" placeholder="(password)"><br>
-                    <input type="submit" name="submit" value="Prijavite se" id="submit">
+                    <input type="submit" name="submit" value="Prijavite se" class="button">
+                </form>
+                <form action="/register">
+                    @csrf
+                    <input type="submit" class="button" value="Registracija">
+                </form>
+                <form action="/new-book" method="GET">
+                    @csrf
+                    <input type="submit" class="button" value="Dodaj knjige">
                 </form>
             </div>
         </div>
