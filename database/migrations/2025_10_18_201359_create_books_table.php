@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('author');
             $table->string('genre');
             $table->string('isbn')->nullable();
-            $table->enum('status', ['new', 'rented', 'reading', 'read'])->default('new')->change();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->enum('status', ['new', 'rented', 'reading', 'read'])->default('new');
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class BookController extends Controller
             'title' => 'required',
             'author' => 'required',
             'genre' => 'required',
-            'isbn' => ['required', 'unique:books', 'digits:13']
+            'isbn' => ['bail', 'required', 'unique:books', 'digits:13']
         ]);
         
         $incomingFields['title'] = strip_tags($incomingFields['title']);
@@ -27,6 +27,6 @@ class BookController extends Controller
         $incomingFields['isbn'] = strip_tags($incomingFields['isbn']);
 
         Book::create($incomingFields);
-        return view('new_book');
+        return back()->with('success', 'Uspješno ste dodali novu knjigu u sistem');
     }
 }

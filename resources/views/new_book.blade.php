@@ -15,14 +15,30 @@
                 <h2>Informacije o knjizi</h2>
                 <form action="/new-book" method="POST">
                     @csrf
-                    <input type="text" name="title" placeholder="naslov"><br>
-                    <input type="text" name="author" placeholder="autor"><br>
-                    <input type="text" name="genre" placeholder="žanr"><br>
-                    <input type="text" name="isbn" placeholder="ISBN"><br>
+                    <input type="text" name="title" placeholder="naslov" value="{{ old('title') }}"><br>
+                    <input type="text" name="author" placeholder="autor" value="{{ old('author') }}"><br>
+                    <input type="text" name="genre" placeholder="žanr" value="{{ old('genre') }}"><br>
+                    <input type="text" name="isbn" placeholder="ISBN" value="{{ old('isbn') }}"><br>
                     <input type="submit" name="submit" value="Sačuvajte knjigu" class="button">
                 </form>
+
+                @if (session('success'))
+                    <div class="success-message">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="errors">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
     </div>
+    
 </body>
 </html>
