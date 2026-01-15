@@ -48,22 +48,34 @@ html, body {
     box-shadow: 0 0 20px rgba(166, 163, 224, 0.2);
   }
 
+  /* #register-form input {
+    width: 200px;
+    margin-left: 0%;
+    margin-right: 0%;
+  } */
+
+  #register-form h4 {
+    margin: 0;
+    text-align: left;
+    margin-left: 10px;
+  }
+
   input {
     margin: 10px;
     border: 1px solid gray;
     border-radius: 75px;
-    width: 160px;
-    height: 25px;
+    width: 250px;
+    height: 30px;
     padding-left: 10px;
   }
 
-  .button {
-    width:  max-content;
-    height: max-content;
+  .button, #register-form .button {
+    width: fit-content;
+    height: fit-content;
     border: 1px solid gray;
     border-radius: 75px;
     background-color: blanchedalmond;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 20px 10px 20px;
     margin: 5px;
   }
 

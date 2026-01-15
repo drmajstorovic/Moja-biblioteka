@@ -11,3 +11,8 @@ Route::get('/', function () {
 // Book routes
 Route::get('/new-book', [BookController::class, 'new_book']);
 Route::post('/new-book', [BookController::class, 'save_book']);
+
+// User routes
+Route::get('/register', function () {
+    return view('register');
+});
