@@ -8,28 +8,6 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <div class="hero" style="background-image: url('{{ asset('images/bookshelf.png') }}');">
-        <div class="overlay"></div>
-        <div class="content">
-            <div class="form">
-                <h2>Moja biblioteka</h2>
-                <form action="/login" id="login">
-                    @csrf
-                    <h3>Prijava</h3>
-                    <input type="text" name="username" placeholder="(username)"><br>
-                    <input type="password" name="password" placeholder="(password)"><br>
-                    <input type="submit" name="submit" value="Prijavite se" class="button">
-                </form>
-                <form action="/register">
-                    @csrf
-                    <input type="submit" class="button" value="Registracija">
-                </form>
-                <form action="/new-book" method="GET">
-                    @csrf
-                    <input type="submit" class="button" value="Dodaj knjige">
-                </form>
-            </div>
-        </div>
-    </div>
+    <h1>woooohooooo!!!</h1>
 </body>
 </html>

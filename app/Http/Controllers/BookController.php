@@ -9,10 +9,6 @@ use function Laravel\Prompts\alert;
 
 class BookController extends Controller
 {
-    public function new_book(){
-        return view('new_book');
-    }
-
     public function save_book(Request $request){
         $incomingFields = $request->validate([
             'title' => 'required',
